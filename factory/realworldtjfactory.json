@@ -1,0 +1,15 @@
+{
+	"name": "realworldtjfactory",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b5b4eb88-8499-4fdf-bbd3-074a2b658d58",
+		"tenantId": "f29f8851-efa7-429b-8d22-32ee992607aa"
+	}
+}
