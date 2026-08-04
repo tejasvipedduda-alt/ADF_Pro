@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "realworldtjfactory"
+		},
+		"ls_cdc_accountKey": {
+			"value": ""
+		},
+		"ls_database_password": {
+			"value": ""
+		},
+		"ls_cdc_properties_typeProperties_url": {
+			"value": "https://adlsdatalaketj.dfs.core.windows.net/"
+		},
+		"ls_database_properties_typeProperties_server": {
+			"value": "adfproservertj.database.windows.net"
+		},
+		"ls_database_properties_typeProperties_database": {
+			"value": "prodatabase"
+		},
+		"ls_database_properties_typeProperties_userName": {
+			"value": "proadmin"
+		},
+		"ls_restapi_properties_typeProperties_url": {
+			"value": "https://pokeapi.co/api/v2/pokemon"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
