@@ -1,0 +1,17 @@
+{
+	"name": "ls_onprem_files",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "\\\\localhost\\c$\\Tejasvionprem",
+			"userId": ".\\adfuser",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwYzYzYTA1Yy1kNWVjLTRiZTktYWE2Ni1hNDc2ZTU4OTU0NGYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "selfhostedir",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
