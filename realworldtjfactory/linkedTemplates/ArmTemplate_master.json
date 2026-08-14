@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ls_database'"
 		},
+		"ls_onprem_files_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_onprem_files'"
+		},
 		"ls_cdc_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdatalaketj.dfs.core.windows.net/"
@@ -30,6 +34,14 @@
 		"ls_database_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "proadmin"
+		},
+		"ls_onprem_files_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "\\\\localhost\\c$\\Tejasvionprem"
+		},
+		"ls_onprem_files_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": ".\\adfuser"
 		},
 		"ls_restapi_properties_typeProperties_url": {
 			"type": "string",
@@ -68,6 +80,9 @@
 					"ls_database_password": {
 						"value": "[parameters('ls_database_password')]"
 					},
+					"ls_onprem_files_password": {
+						"value": "[parameters('ls_onprem_files_password')]"
+					},
 					"ls_cdc_properties_typeProperties_url": {
 						"value": "[parameters('ls_cdc_properties_typeProperties_url')]"
 					},
@@ -82,10 +97,36 @@
 					},
 					"ls_restapi_properties_typeProperties_url": {
 						"value": "[parameters('ls_restapi_properties_typeProperties_url')]"
+					},
+					"ls_onprem_files_properties_typeProperties_host": {
+						"value": "[parameters('ls_onprem_files_properties_typeProperties_host')]"
+					},
+					"ls_onprem_files_properties_typeProperties_userId": {
+						"value": "[parameters('ls_onprem_files_properties_typeProperties_userId')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "realworldtjfactory_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'realworldtjfactory_ArmTemplate_0')]"
+			]
 		}
 	]
 }

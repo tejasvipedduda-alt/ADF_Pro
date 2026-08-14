@@ -11,6 +11,9 @@
 		"ls_database_password": {
 			"value": ""
 		},
+		"ls_onprem_files_password": {
+			"value": ""
+		},
 		"ls_cdc_properties_typeProperties_url": {
 			"value": "https://adlsdatalaketj.dfs.core.windows.net/"
 		},
@@ -22,6 +25,12 @@
 		},
 		"ls_database_properties_typeProperties_userName": {
 			"value": "proadmin"
+		},
+		"ls_onprem_files_properties_typeProperties_host": {
+			"value": "\\\\localhost\\c$\\Tejasvionprem"
+		},
+		"ls_onprem_files_properties_typeProperties_userId": {
+			"value": ".\\adfuser"
 		},
 		"ls_restapi_properties_typeProperties_url": {
 			"value": "https://pokeapi.co/api/v2/pokemon"
